@@ -19,7 +19,8 @@ This is meant to be a collaborative and living document. Please open issues, PRs
 11. [Error Handling](#error-handling)
 12. [Formatting](#formatting)
 13. [Comments](#comments)
-14. [Translation](#translation)
+14. [Linter](#linter)
+15. [Git Commits](#git-commits)
 
 ## Introduction
 
@@ -2386,5 +2387,74 @@ const actions = function() {
   // ...
 };
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## Linter
+
+As a group, we should use a single linter so all of our code is formatted and linted in the same way.
+
+We will be using the following:
+
+### [StandardJS](https://standardjs.com/)
+
+If this linter conflicts with anything mentioned above in this style guide, please raise that in an issue and we will either modify the style guide above or employ an exception to the linter (if possible).
+
+#### Installation
+Global: `$ npm install standard --global`
+Local: `npm install standard --save-dev`
+
+#### Usage
+Check javascript files in current directory:
+```
+$ standard
+Error: Use JavaScript Standard Style
+  lib/torrent.js:950:11: Expected '===' and instead saw '=='.
+```
+
+Check javascript files in specified directories
+```
+$ standard "src/util/**/*.js" "test/**/*.js"
+```
+Note: by default standard will look for all files matching the patterns: **/*.js, **/*.jsx.
+
+#### IDE/Editor Plugins
+
+[VSCode](https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standardjs)
+[Atom](https://atom.io/packages/linter-js-standard)
+[WebStorm](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/)
+
+**[⬆ back to top](#table-of-contents)**
+
+## Git Commits
+
+We use Jira for project management, so we can make use of "Smart Commits" to assist in updating open Jira issues.
+
+Commits should adhere to the smart commit format. An example of basic formatting is as follows:
+
+```
+<ignored text> <ISSUE_KEY> <ignored text> #<COMMAND> <optional COMMAND_ARGUMENTS>
+```
+
+The `ISSUE_KEY` can be found on the Jira issues.
+
+The `COMMAND` can be one of the following `comment`, `time`, `transition`.
+
+`comment` allows you to inject a comment into the issue upon commit.
+`time` allows you to record time tracking information on the issue upon commit.
+`transition` allows you to transition an issue from one state to another upon commit.
+
+Examples:
+`TS-1 #comment corrected indent issue`
+`TS-1 #time 1w 2d 4h 30m Total work logged`
+*This example records 1 week, 2 days, 4 hours and 30 minutes against the issue, and adds the comment 'Total work logged' in the Work Log tab of the issue. (Each value for w, d, h and m can be a decimal number).*
+`JRA-090 #close Fixed this today`
+*This example executes the close issue workflow transition for the issue and adds the comment 'Fixed this today' to the issue. Note that the comment is added automatically without needing to use the #comment command. The Smart Commit only considers the part of a transition name before the first space. So, for a transition name such as finish work, then specifying #finish is sufficient. You must use hyphens to replace spaces when ambiguity can arise over transition names, for example: #finish-work.*
+
+
+**NOTE** The email address you use to commit must match the email bound to your Jira account.
+
+Please review [Jira's Smart Commit Guide](https://confluence.atlassian.com/fisheye/using-smart-commits-960155400.html) for full details.
+
 
 **[⬆ back to top](#table-of-contents)**
