@@ -1,19 +1,25 @@
-# clean-code-javascript
+# Developer Style Guide: EOSLAB.io
+
+The vast majority of the following is taken from [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript) by Ryan McDermott with some additions and addendums found elsewhere on the internet.
+
+This is meant to be a collaborative and living document. Please open issues, PRs, or conversations on your opinions, comments, and suggestions for this guide.
 
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Variables](#variables)
-3. [Functions](#functions)
-4. [Objects and Data Structures](#objects-and-data-structures)
-5. [Classes](#classes)
-6. [SOLID](#solid)
-7. [Testing](#testing)
-8. [Concurrency](#concurrency)
-9. [Error Handling](#error-handling)
-10. [Formatting](#formatting)
-11. [Comments](#comments)
-12. [Translation](#translation)
+2. [Naming convention](#naming-convention)
+3. [Agreed-upon Terms](#agreed-upon-terms)
+4. [Variables](#variables)
+5. [Functions](#functions)
+6. [Objects and Data Structures](#objects-and-data-structures)
+7. [Classes](#classes)
+8. [SOLID](#solid)
+9. [Testing](#testing)
+10. [Concurrency](#concurrency)
+11. [Error Handling](#error-handling)
+12. [Formatting](#formatting)
+13. [Comments](#comments)
+14. [Translation](#translation)
 
 ## Introduction
 
@@ -42,6 +48,44 @@ mistakes. Every piece of code starts as a first draft, like wet clay getting
 shaped into its final form. Finally, we chisel away the imperfections when
 we review it with our peers. Don't beat yourself up for first drafts that need
 improvement. Beat up the code instead!
+
+## Naming convention
+
+When we're tasked with a project or feature that needs implementation, particularly when that assignment has a hard deadline, naming often falls on the wayside and takes a backseat to the "Just get it done" mentality.
+
+However, adequate thought towards naming your variables, methods, classes, files, and folders should remain a priority as those names will often become immortalized in the code and be seen time-and-time-again by not only yourself but other developers over potentially long periods of time.
+
+While it's important to your own productivity to employ proper naming, it's that second group -- other developers -- that makes adhering to a naming convention of the upmost priority. If others ever need to dive into your code, it will be beneficial if they can expect consistency throughout the app.
+
+As such, please consider the following:
+
+![Naming convention infographic](https://cdn-media-1.freecodecamp.org/images/-Se0xzoDIzsROxX4YKSWtQuD6Z7Mq4UbT-ub)
+
+**[⬆ back to top](#table-of-contents)**
+
+## Agreed-upon Terms
+
+It makes for tough searchability and scalability if developers use different synonyms for the similar tasks. For instance, each of the following are valid method names that all denote the same functionality:
+
+```
+getUser ()
+fetchUser ()
+retrieveUser ()
+```
+
+Instead, we as a group need to agree on terms and use them consistently.
+
+Below is a table that we can all adhere to and add to as new terms emerge.
+
+| Use this Term    | Definition                       | Example     |
+|------------------|----------------------------------|-------------|
+| get              | to retrieve or fetch records     | getUser     |
+| create           | to add, create, or post records  | createUser  |
+| update           | to update, put, or patch records | updateUser  |
+| destroy          | to delete records                | destroyUser |
+
+
+**[⬆ back to top](#table-of-contents)**
 
 ## **Variables**
 
@@ -2342,32 +2386,5 @@ const actions = function() {
   // ...
 };
 ```
-
-**[⬆ back to top](#table-of-contents)**
-
-## Translation
-
-This is also available in other languages:
-
-- ![fr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/France.png) **French**:
-  [GavBaros/clean-code-javascript-fr](https://github.com/GavBaros/clean-code-javascript-fr)
-- ![br](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png) **Brazilian Portuguese**: [fesnt/clean-code-javascript](https://github.com/fesnt/clean-code-javascript)
-- ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Uruguay.png) **Spanish**: [andersontr15/clean-code-javascript](https://github.com/andersontr15/clean-code-javascript-es)
-- ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Spain.png) **Spanish**: [tureey/clean-code-javascript](https://github.com/tureey/clean-code-javascript)
-- ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Chinese**:
-  - [alivebao/clean-code-js](https://github.com/alivebao/clean-code-js)
-  - [beginor/clean-code-javascript](https://github.com/beginor/clean-code-javascript)
-- ![de](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Germany.png) **German**: [marcbruederlin/clean-code-javascript](https://github.com/marcbruederlin/clean-code-javascript)
-- ![kr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png) **Korean**: [qkraudghgh/clean-code-javascript-ko](https://github.com/qkraudghgh/clean-code-javascript-ko)
-- ![pl](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Poland.png) **Polish**: [greg-dev/clean-code-javascript-pl](https://github.com/greg-dev/clean-code-javascript-pl)
-- ![ru](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Russia.png) **Russian**:
-  - [BoryaMogila/clean-code-javascript-ru/](https://github.com/BoryaMogila/clean-code-javascript-ru/)
-  - [maksugr/clean-code-javascript](https://github.com/maksugr/clean-code-javascript)
-- ![vi](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png) **Vietnamese**: [hienvd/clean-code-javascript/](https://github.com/hienvd/clean-code-javascript/)
-- ![ja](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Japan.png) **Japanese**: [mitsuruog/clean-code-javascript/](https://github.com/mitsuruog/clean-code-javascript/)
-- ![id](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Indonesia.png) **Indonesia**:
-  [andirkh/clean-code-javascript/](https://github.com/andirkh/clean-code-javascript/)
-- ![it](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Italy.png) **Italian**:
-  [frappacchio/clean-code-javascript/](https://github.com/frappacchio/clean-code-javascript/)
 
 **[⬆ back to top](#table-of-contents)**
