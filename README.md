@@ -2421,7 +2421,9 @@ Note: by default standard will look for all files matching the patterns: **/*.js
 #### IDE/Editor Plugins
 
 [VSCode](https://marketplace.visualstudio.com/items?itemName=chenxsan.vscode-standardjs)
+
 [Atom](https://atom.io/packages/linter-js-standard)
+
 [WebStorm](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/)
 
 **[⬆ back to top](#table-of-contents)**
@@ -2446,8 +2448,10 @@ The `COMMAND` can be one of the following `comment`, `time`, `transition`.
 
 Examples:
 `TS-1 #comment corrected indent issue`
+
 `TS-1 #time 1w 2d 4h 30m Total work logged`
 *This example records 1 week, 2 days, 4 hours and 30 minutes against the issue, and adds the comment 'Total work logged' in the Work Log tab of the issue. (Each value for w, d, h and m can be a decimal number).*
+
 `JRA-090 #close Fixed this today`
 *This example executes the close issue workflow transition for the issue and adds the comment 'Fixed this today' to the issue. Note that the comment is added automatically without needing to use the #comment command. The Smart Commit only considers the part of a transition name before the first space. So, for a transition name such as finish work, then specifying #finish is sufficient. You must use hyphens to replace spaces when ambiguity can arise over transition names, for example: #finish-work.*
 
