@@ -2446,7 +2446,8 @@ The `COMMAND` can be one of the following `comment`, `time`, `transition`.
 `time` allows you to record time tracking information on the issue upon commit.
 `transition` allows you to transition an issue from one state to another upon commit.
 
-Examples:
+#### Examples
+
 `TS-1 #comment corrected indent issue`
 
 `TS-1 #time 1w 2d 4h 30m Total work logged`
